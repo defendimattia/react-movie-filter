@@ -6,7 +6,7 @@ function App() {
     <>
       <h1>Films</h1>
       <ul>
-        {films.map(film => <li><p>title : {film.title} genre: {film.genre}</p></li>)}
+        {films.map((film, i) => <li key={i}><p>title : {film.title} genre: {film.genre}</p></li>)}
       </ul>
     </>
   )
