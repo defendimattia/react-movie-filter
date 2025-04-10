@@ -1,6 +1,9 @@
+import { useState } from "react"
 import films from "./data/films"
 
 function App() {
+
+  const [selectGenre, setSelectGenre] = useState("Tutti")
 
   return (
     <>
@@ -10,13 +13,13 @@ function App() {
       </ul>
       <hr />
       <h2>Filtro genere</h2>
-      <select>        
+      <select value={selectGenre} onChange={e => setSelectGenre(e.target.value)}>
         <option>Tutti</option>
         <option>Fantascienza</option>
         <option>Thriller</option>
         <option>Romantico</option>
         <option>Azione</option>
-        </select>
+      </select>
     </>
   )
 }
